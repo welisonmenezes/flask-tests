@@ -1,4 +1,4 @@
-## Os comandos listados abaixo podem ser executados no cmd do visual studio, ou no prompt do windos
+#### Os comandos listados abaixo podem ser executados no cmd do visual studio ou no prompt do windows
 ###### *A única exceção fica por conta do comando git clone, que deverá ser executado no prompt do git
 
 # Criar ambiente virtual com Python 3
