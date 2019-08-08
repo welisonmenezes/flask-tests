@@ -6,7 +6,11 @@
 
 `caminho-para-seu-ambiente-virtual-aqui/Scripts/activate`
 
-caso não funcione com a barra (/), tente com contra barra (\\)
+Caso não funcione com a barra (/), tente com contra barra (\\)
+
+# Instalando o Flask no ambiente virtual
+
+`pip install flask`
 
 # Para rodar o flask em modo de desenvolvimento
 
