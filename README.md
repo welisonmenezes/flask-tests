@@ -1,14 +1,14 @@
-#Criar ambiente virtual com Python 3
+# Criar ambiente virtual com Python 3
 
 `python -m venv nome-de-sua-escolha-aqui`
 
-#Ativar seu ambiente virtual
+# Ativar seu ambiente virtual
 
 `caminho-para-seu-ambiente-virtual-aqui/Scripts/activate`
 
 caso não funcione com a barra (/), tente com contra barra (\\)
 
-#Para rodar o flask em modo de desenvolvimento
+# Para rodar o flask em modo de desenvolvimento
 
 `set FLASK_ENV='development'`
 
