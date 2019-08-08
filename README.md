@@ -8,9 +8,17 @@
 
 Caso não funcione com a barra (/), tente com contra barra (\\)
 
-# Instalando o Flask no ambiente virtual
+# Instalar o Flask no ambiente virtual
 
 `pip install flask`
+
+# Clonar este repositório
+
+`git clone https://github.com/welisonmenezes/flask-tests.git`
+
+# Acessar raíz deste projeto exemplo
+
+`cd flask-testes`
 
 # Para rodar o flask em modo de desenvolvimento
 
