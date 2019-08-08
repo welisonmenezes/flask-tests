@@ -1,3 +1,6 @@
+## Os comandos listados abaixo podem ser executados no cmd do visual studio, ou no prompt do windos
+###### *A única exceção fica por conta do comando git clone, que deverá ser executado no prompt do git
+
 # Criar ambiente virtual com Python 3
 
 `python -m venv nome-de-sua-escolha-aqui`
@@ -15,6 +18,8 @@ Caso não funcione com a barra (/), tente com contra barra (\\)
 # Clonar este repositório
 
 `git clone https://github.com/welisonmenezes/flask-tests.git`
+
+Este comando deve ser executado no prompt do Git
 
 # Acessar raíz deste projeto exemplo
 
