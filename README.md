@@ -41,7 +41,9 @@ Rodar dessa forma facilita no desenvolvimento, pois cada alteração no código 
 
 No arquivo config.py atualize os campos abaixo com os dados da sua conexão
 
-```MYSQL_HOST = 'seu-host-aqui'
+```
+MYSQL_HOST = 'seu-host-aqui'
 MYSQL_USER = 'seu-user-aqui'
 MYSQL_PASSWORD = 'sua-senha-aqui'
-MYSQL_DB = 'seu-banco-de-dados-aqui'```
+MYSQL_DB = 'seu-banco-de-dados-aqui'
+```
