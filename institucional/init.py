@@ -1,4 +1,4 @@
-from flask import current_app, Blueprint, render_template
+from flask import current_app, Blueprint, render_template, request
 
 bp = Blueprint('institucional', __name__, url_prefix='/', template_folder='templates/')
 
@@ -8,9 +8,18 @@ def index():
     return render_template('home.html', paises=paises)
 
 
-@bp.route('/contato')
+@bp.route('/contato', methods=['GET', 'POST'])
 def contato():
-    return render_template('contato.html')
+    feedback = ''
+    print(request.method)
+    if request.method == 'POST':
+        #print(request.get_data())
+        print(request.form.get('email', ''))
+        print(request.form.get('assunto', ''))
+        print(request.form.get('mensagem', ''))
+        feedback = 'Mensagem enviada com sucesso'
+
+    return render_template('contato.html', feedback=feedback)
 
 
 @bp.route('/sobre')
