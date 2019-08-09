@@ -35,15 +35,13 @@ Este comando deve ser executado no prompt do Git
 
 Rodar dessa forma facilita no desenvolvimento, pois cada alteração no código ficará prontamente disponível para visualização no navegador, sem a necessidade de matar o serviço e levantar novamente.
 
-# Para se conectar à uma banco de dados MySQL
+# Para se conectar à um banco de dados MySQL
 
 `pip install PyMySQL`
 
 No arquivo config.py atualize os campos abaixo com os dados da sua conexão
 
-```
-MYSQL_HOST = 'localhost'
-MYSQL_USER = 'root'
-MYSQL_PASSWORD = ''
-MYSQL_DB = 'joins'
-```
+```MYSQL_HOST = 'seu-host-aqui'
+MYSQL_USER = 'seu-user-aqui'
+MYSQL_PASSWORD = 'sua-senha-aqui'
+MYSQL_DB = 'seu-banco-de-dados-aqui'```
