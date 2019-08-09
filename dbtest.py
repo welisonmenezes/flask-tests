@@ -12,6 +12,9 @@ def configure(app):
         sql = "SELECT * FROM direita"
         cursor.execute(sql)
         results = cursor.fetchall()
+        #cursor.commit()
+        cursor.close()
+        db.close()
         print(results)
         print("Conectado ao banco de dados")
     except:
