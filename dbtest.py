@@ -9,7 +9,7 @@ def configure(app):
         
     try:
         cursor = db.cursor()
-        sql = "SELECT * FROM direita"
+        sql = "SELECT * FROM usuarios"
         cursor.execute(sql)
         results = cursor.fetchall()
         #cursor.commit()

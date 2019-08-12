@@ -6,7 +6,7 @@ DEBUG = True
 MYSQL_HOST = 'localhost'
 MYSQL_USER = 'root'
 MYSQL_PASSWORD = ''
-MYSQL_DB = 'joins'
+MYSQL_DB = 'testes'
 
 # Configurações de segurança
 SECRET_KEY = '#$#gdFDKF#993FDVKkfdkj#$$2@@@@dfdlafFGÇPLO^dfe__fd'

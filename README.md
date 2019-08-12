@@ -47,3 +47,7 @@ MYSQL_USER = 'seu-user-aqui'
 MYSQL_PASSWORD = 'sua-senha-aqui'
 MYSQL_DB = 'seu-banco-de-dados-aqui'
 ```
+
+# Para instalar dependências à partir do arquivo requirements.txt
+
+`pip install -r requirements.txt`
