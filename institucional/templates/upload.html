@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% set active_page = "upload" %}
+
+{% block title %}Upload{% endblock %}
+
+{% block content %}
+<h1>Upload teste</h1>
+
+<div class="row">
+    <div class="col-md-6">
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul class=flashes>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+        <form action="" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label>Selecione um arquivo:</label>
+                <input type=file name=file class="form-control">
+            </div>
+            <input type=submit value=Upload class="btn btn-primary">
+        </form>
+    </div>
+</div>
+{% endblock %}

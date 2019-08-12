@@ -11,6 +11,12 @@
 
 Caso não funcione com a barra (/), tente com contra barra (\\)
 
+# Para instalar dependências à partir do arquivo requirements.txt
+
+`pip install -r requirements.txt`
+
+Executando o código acima, todas as dependênicas desse projetos serão automaticamente instalados, dessa forma os comandos pip install subsequêntes não serão mais necessários.
+
 # Instalar o Flask no ambiente virtual
 
 `pip install flask`
@@ -47,7 +53,3 @@ MYSQL_USER = 'seu-user-aqui'
 MYSQL_PASSWORD = 'sua-senha-aqui'
 MYSQL_DB = 'seu-banco-de-dados-aqui'
 ```
-
-# Para instalar dependências à partir do arquivo requirements.txt
-
-`pip install -r requirements.txt`
