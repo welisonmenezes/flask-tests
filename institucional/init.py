@@ -61,7 +61,6 @@ def upload():
             file.save(os.path.join(current_app.config['UPLOAD_FOLDER'], filename))
             return redirect(url_for('institucional.upload', filename=filename))
         else:
-            print('xxx')
             flash('Tipo de arquivo não permitido.')
 
     return render_template('upload.html')

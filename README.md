@@ -11,7 +11,7 @@
 
 Caso não funcione com a barra (/), tente com contra barra (\\)
 
-# Para instalar dependências à partir do arquivo requirements.txt
+# Instalar dependências à partir de requirements.txt
 
 `pip install -r requirements.txt`
 
