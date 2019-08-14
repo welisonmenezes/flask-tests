@@ -69,3 +69,27 @@ def upload():
 # helper para testar se a extensão do arquivo é permitida
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in current_app.config['ALLOWED_EXTENSIONS']
+
+@bp.route('/url-params')
+def url_without_params():
+    valor_final = '-'
+    return render_template('url-params.html', valor=valor_final)
+
+@bp.route('/url-params/<int:valor1>/<int:valor2>/<int:valor3>')
+def url_params(valor1, valor2, valor3):
+    if ((valor1 > valor3) or (valor3 < valor2)):
+        valor_final = int(valor3 / valor1)
+    else:
+        total = valor1 + valor2 + valor3
+        started = False
+        separator = ''
+        retorno = ''
+        while (total > 0):
+            if ((total % 3) == 0):
+                if (started):
+                    separator = '-'
+                started = True
+                retorno = retorno + separator + str(total)
+            total = total - 1
+        valor_final = retorno
+    return render_template('url-params.html', valor=valor_final)

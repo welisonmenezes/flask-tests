@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% set active_page = "url-params" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h1>Teste de parâmetros via url</h1>
+<ul>
+    <li>
+        <a href="/url-params/1/2/3">Teste com 1, 2 e 3</a>
+    </li>
+    <li>
+        <a href="/url-params/3/2/3">Teste com 3, 2 e 3</a>
+    </li>
+    <li>
+        <a href="/url-params/9/12/30">Teste com 9, 12 e 30</a>
+    </li>
+    <li>
+        <a href="/url-params/11/5/3">Teste com 11, 5 e 3</a>
+    </li>
+</ul>
+<p>O retorno é: {{ valor }}</p>
+{% endblock %}
