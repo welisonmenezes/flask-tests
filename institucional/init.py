@@ -81,15 +81,13 @@ def url_params(valor1, valor2, valor3):
         valor_final = int(valor3 / valor1)
     else:
         total = valor1 + valor2 + valor3
-        started = False
         separator = ''
         retorno = ''
         while (total > 0):
             if ((total % 3) == 0):
-                if (started):
-                    separator = '-'
-                started = True
                 retorno = retorno + separator + str(total)
+                if (separator == ''):
+                    separator = '-'
             total = total - 1
         valor_final = retorno
     return render_template('url-params.html', valor=valor_final)
