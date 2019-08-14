@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 from institucional import init
 import dbtest
 
@@ -11,7 +11,10 @@ def create_app():
 
     dbtest.configure(app)
     
-    
     app.register_blueprint(init.bp)
+
+    @app.errorhandler(404)
+    def page404(error):
+        return render_template('page-404.html')
 
     return app
