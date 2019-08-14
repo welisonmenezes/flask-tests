@@ -15,6 +15,6 @@ def create_app():
 
     @app.errorhandler(404)
     def page404(error):
-        return render_template('page-404.html')
+        return render_template('page-404.html'), 404
 
     return app

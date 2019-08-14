@@ -7,7 +7,7 @@ bp = Blueprint('institucional', __name__, url_prefix='/', template_folder='templ
 @bp.route('/')
 def index():
     paises = ['Brasil', 'Argentina', 'Estados Unidos', 'França']
-    return render_template('home.html', paises=paises)
+    return render_template('home.html', paises=paises), 200
 
 
 @bp.route('/contato', methods=['GET', 'POST'])
@@ -21,17 +21,17 @@ def contato():
         print(request.form.get('mensagem', ''))
         feedback = 'Mensagem enviada com sucesso'
 
-    return render_template('contato.html', feedback=feedback)
+    return render_template('contato.html', feedback=feedback), 200
 
 
 @bp.route('/sobre')
 def sobre():
-    return render_template('sobre.html')
+    return render_template('sobre.html'), 200
 
 
 @bp.route('/servicos')
 def servicos():
-    return render_template('servicos.html')
+    return render_template('servicos.html'), 200
 
 
 @bp.route('/upload', methods=['GET', 'POST'])
@@ -63,7 +63,7 @@ def upload():
         else:
             flash('Tipo de arquivo não permitido.')
 
-    return render_template('upload.html')
+    return render_template('upload.html'), 200
 
 
 # helper para testar se a extensão do arquivo é permitida
@@ -73,7 +73,7 @@ def allowed_file(filename):
 @bp.route('/url-params')
 def url_without_params():
     valor_final = '-'
-    return render_template('url-params.html', valor=valor_final)
+    return render_template('url-params.html', valor=valor_final), 200
 
 @bp.route('/url-params/<int:valor1>/<int:valor2>/<int:valor3>')
 def url_params(valor1, valor2, valor3):
@@ -90,4 +90,4 @@ def url_params(valor1, valor2, valor3):
                     separator = '-'
             total = total - 1
         valor_final = retorno
-    return render_template('url-params.html', valor=valor_final)
+    return render_template('url-params.html', valor=valor_final), 200
