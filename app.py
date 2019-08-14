@@ -9,8 +9,10 @@ def create_app():
     app.config.from_pyfile('config.py')
     print(app.config)
 
+    # database test
     dbtest.configure(app)
     
+    # blueprint test
     app.register_blueprint(init.bp)
 
     @app.errorhandler(404)

@@ -37,7 +37,7 @@ Este comando deve ser executado no prompt do Git
 
 `set FLASK_DEBUG=1`
 
-`python -m flask run`
+`python -m flask run --reload`
 
 Rodar dessa forma facilita no desenvolvimento, pois cada alteração no código ficará prontamente disponível para visualização no navegador, sem a necessidade de matar o serviço e levantar novamente.
 
