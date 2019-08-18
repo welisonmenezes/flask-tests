@@ -1,13 +1,13 @@
 import pymysql
 
 def configure(app):
-    db = pymysql.connect(
-        app.config.get('MYSQL_HOST'),
-        app.config.get('MYSQL_USER'),
-        app.config.get('MYSQL_PASSWORD'),
-        app.config.get('MYSQL_DB'))
-        
     try:
+        db = pymysql.connect(
+            app.config.get('MYSQL_HOST'),
+            app.config.get('MYSQL_USER'),
+            app.config.get('MYSQL_PASSWORD'),
+            app.config.get('MYSQL_DB'))
+
         cursor = db.cursor()
         sql = "SELECT * FROM usuarios"
         cursor.execute(sql)
