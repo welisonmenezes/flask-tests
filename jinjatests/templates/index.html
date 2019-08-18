@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% set active_page = "jinja-tests" %}
+
+{% block title %}Jinja Tests{% endblock %}
+
+{% block content %}
+
+<h4>Vairáveis</h4>
+{% set nome = 'Welison' %}
+<p>{{ nome }}</p>
+<p>{{ felinos[0] }}</p>
+{% set navigation %}
+    <li><a href="#">Index</a>
+    <li><a href="#">Downloads</a>
+{% endset %}
+<ul>{{ navigation }}</ul>
+<p>{{ getName }}</p>
+<p>{{ getName() }}</p>
+
+<h4>Filtros</h4>
+<p>{{ felinos[1]|lower }}</p>
+<p>{{ felinos[1]|upper }}</p>
+<p>{{ felinos|first }}</p>
+<p>{{ felinos|last }}</p>
+<p>{{ felinos|join(', ') }}</p>
+<p>{{ myhtml|safe }}</p>
+<p>{{ numbers|max }}</p>
+<p>{{ numbers|sum }}</p>
+<p>{{ numbers|min }}</p>
+
+<h4>Custom filter</h4>
+<p>{{ 'loremipsum'|add_sign }}</p>
+
+<h4>Tests</h4>
+<p>{{ numbers[1] is divisibleby 3 }}</p>
+<p>{{ numbers[0] is eq 3 }}</p>
+<p>{{ numbers[0] is gt 3 }}</p>
+<p>{{ numbers[0] is lt 3 }}</p>
+<p>{{ nonexists is defined }}</p>
+<p>{{ myhtml is defined }}</p>
+<p>{{ 2 is even }}</p>
+<p>{{ 2 is odd }}</p>
+
+{# commented #}
+
+<h4>Loop For</h4>
+{% for felino in felinos %}
+<p>{{ felino }} - {{ loop.index }}</p>
+{% endfor %}
+
+<h4>If</h4>
+{% if felinos[0] == 'Tigre' %}
+<p>Posição 0</p>
+{% elif felinos[1] == 'Tigre' %}
+<p>Posição 1</p>
+{% else %}
+<p>Posição acima de 1</p>
+{% endif %}
+
+<h4>Macros</h4>
+{% import 'macros/input.html' as forms %}
+
+<p>{{ forms.input('test') }}</p>
+<p>{{ forms.textarea('test2') }}</p>
+
+<h4>Includes</h4>
+{% include "include.html" ignore missing %}
+
+{% endblock %}

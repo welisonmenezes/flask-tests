@@ -1,5 +1,6 @@
 from flask import Flask, render_template
 from institucional import init
+from jinjatests import init as jinit
 import dbtest
 
 def create_app():
@@ -13,7 +14,8 @@ def create_app():
     dbtest.configure(app)
     
     # blueprint test
-    app.register_blueprint(init.bp)
+    app.register_blueprint(init.institucional_bp)
+    app.register_blueprint(jinit.jinja_bp)
 
     @app.errorhandler(404)
     def page404(error):

@@ -2,15 +2,15 @@ import os
 from flask import current_app, Blueprint, render_template, request, flash, redirect, url_for
 from werkzeug.utils import secure_filename
 
-bp = Blueprint('institucional', __name__, url_prefix='/', template_folder='templates/')
+institucional_bp = Blueprint('institucional', __name__, url_prefix='/', template_folder='templates/')
 
-@bp.route('/')
+@institucional_bp.route('/')
 def index():
     paises = ['Brasil', 'Argentina', 'Estados Unidos', 'França']
     return render_template('home.html', paises=paises), 200
 
 
-@bp.route('/contato', methods=['GET', 'POST'])
+@institucional_bp.route('/contato', methods=['GET', 'POST'])
 def contato():
     feedback = ''
     print(request.method)
@@ -24,17 +24,17 @@ def contato():
     return render_template('contato.html', feedback=feedback), 200
 
 
-@bp.route('/sobre')
+@institucional_bp.route('/sobre')
 def sobre():
     return render_template('sobre.html'), 200
 
 
-@bp.route('/servicos')
+@institucional_bp.route('/servicos')
 def servicos():
     return render_template('servicos.html'), 200
 
 
-@bp.route('/upload', methods=['GET', 'POST'])
+@institucional_bp.route('/upload', methods=['GET', 'POST'])
 def upload():
     print(current_app.config)
     
@@ -70,12 +70,12 @@ def upload():
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in current_app.config['ALLOWED_EXTENSIONS']
 
-@bp.route('/url-params')
+@institucional_bp.route('/url-params')
 def url_without_params():
     valor_final = '-'
     return render_template('url-params.html', valor=valor_final), 200
 
-@bp.route('/url-params/<int:valor1>/<int:valor2>/<int:valor3>')
+@institucional_bp.route('/url-params/<int:valor1>/<int:valor2>/<int:valor3>')
 def url_params(valor1, valor2, valor3):
     if ((valor1 > valor3) or (valor3 < valor2)):
         valor_final = int(valor3 / valor1)
